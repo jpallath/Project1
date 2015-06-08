@@ -56,5 +56,8 @@ var deck = {
         }
     }
     return total
-    }
+  },
+  cardMatch : function(x){
+
+  },
     }

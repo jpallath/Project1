@@ -2,8 +2,9 @@
   background-color: green
 }*/
 
-#board{
+body{
   position: fixed;
+  background-color: green;
 }
 
 #dealer{
@@ -20,4 +21,103 @@
   height: 200px;
   top: 560px;
   left: 60px;
+}
+
+div img{
+  position: absolute;
+  top: 280px;
+  left: 400px;
+}
+
+#dealer .card-one{
+  background-color: grey;
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  left: 814px;
+  border: dotted;
+  background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+}
+
+#dealer .card-two{
+  background-color: grey;
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  left: 631px;
+  border: dotted;
+  background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+}
+
+#player .card-one{
+  background-color: grey;
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  left: 0px;
+  border: dotted;
+  background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+}
+
+#player .card-two{
+  background-color: grey;
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  left: 181px;
+  border: dotted;
+  background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+}
+
+.cash{
+  position: absolute;
+  background: yellow;
+  width: 370px;
+  height: 20px;
+  z-index: 1;
+  top: 180px;
+  text-align: right;
+}
+
+.cash:hover{
+  background: green;
+}
+
+.card {
+  background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: absolute;
+  width:  3.75em;
+  height: 5.00em;
+}
+.front {
+  background-color: #ffffff;
+  color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
