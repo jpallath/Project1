@@ -4,7 +4,7 @@
 
 body{
   /*background-color: green;*/
-  background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/awesomeBackground.jpg");
+  background-image: url("BlackJack/Images/awesomeBackground.jpg");
   background-repeat: repeat;
 }
 
@@ -120,7 +120,7 @@ div img:hover{
 }
 
 .active{
-  background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/OldTimeyDeck.png");
+  background-image: url("BlackJack/Images/OldTimeyDeck.png");
   background-repeat: no-repeat;
   background-size : 1150%;
   transform: rotate(360deg);
