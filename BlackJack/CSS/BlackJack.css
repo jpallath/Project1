@@ -43,7 +43,7 @@ div img:hover{
   height: 250px;
   left: 814px;
   background-position: 0px 0px;
-  transition: all 5s ease;
+  transition: all .25s ease;
   /*border: dotted;
   background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
   border-color: #808080 #000000 #000000 #808080;
@@ -60,7 +60,7 @@ div img:hover{
   width: 20%;
   height: 250px;
   left: 631px;
-  transition: all 5s ease;
+  transition: all .25s ease;
   /*background-position: -190px 0px;*/
   /*border: dotted;
   background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
@@ -77,7 +77,7 @@ div img:hover{
   width: 20%;
   height: 250px;
   background-position: -1875px -1060px;
-  transition: all 5s ease;
+  transition: all .25s ease;
   /*left: 0px;
   border: dotted;
   background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
@@ -95,7 +95,7 @@ div img:hover{
   height: 263px;
   left: 181px;
   background-position: -380px 0px;
-  transition: all 5s ease;
+  transition: all .25s ease;
   /*border: dotted;
   background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
   border-color: #808080 #000000 #000000 #808080;
