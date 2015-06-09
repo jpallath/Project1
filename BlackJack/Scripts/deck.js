@@ -80,13 +80,13 @@ checkWin : function(x){
 },
 countUpToWinner : function(){
   if (Player.handTotal>Dealer.handTotal){
-    $image.attr("src","/Users/JPallath/src/Project1/BlackJack/Images/Custom-Balloon-design-tool.jpg")
+    $image.attr("src","BlackJack/Images/Custom-Balloon-design-tool.jpg")
     Player.money=Player.money+(2*putIn)
     $cash.text(Player.money)
   } else if (Player.handTotal<Dealer.handTotal){
-    $image.attr("src","/Users/JPallath/src/Project1/BlackJack/Images/sad-kid.jpg")
+    $image.attr("src","BlackJack/Images/sad-kid.jpg")
   } else if (Player.handTotal==Dealer.handTotal){
-    $image.attr("src","/Users/JPallath/src/Project1/BlackJack/Images/dog.jpg")
+    $image.attr("src","BlackJack/Images/dog.jpg")
     $body=$("body");
     $body.css("background-image","/Users/JPallath/src/Project1/BlackJack/Images/dog.jpg")
   }
