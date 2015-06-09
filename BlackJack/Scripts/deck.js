@@ -88,7 +88,7 @@ countUpToWinner : function(){
   } else if (Player.handTotal==Dealer.handTotal){
     $image.attr("src","BlackJack/Images/dog.jpg")
     $body=$("body");
-    $body.css("background-image","/Users/JPallath/src/Project1/BlackJack/Images/dog.jpg")
+    $body.css("background-image","BlackJack/Images/dog.jpg")
   }
 }
     }
