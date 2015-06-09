@@ -120,7 +120,7 @@ div img:hover{
 }
 
 .active{
-  background-image: url("BlackJack/Images/OldTimeyDeck.png");
+  background-image: url("../Images/OldTimeyDeck.png");
   background-repeat: no-repeat;
   background-size : 1150%;
   transform: rotate(360deg);
