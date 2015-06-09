@@ -3,22 +3,23 @@
 }*/
 
 body{
-  position: fixed;
-  background-color: green;
+  /*background-color: green;*/
+  background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/awesomeBackground.jpg");
+  background-repeat: repeat;
 }
 
 #dealer{
   position:absolute;
   background-color: red;
-  width: 1000px;
-  height: 200px;
+  width: 80%;
+  height: 20%;
 }
 
 #player{
   position: absolute;
   background-color: blue;
-  width: 1000px;
-  height: 200px;
+  width: 80%;
+  height: 20%;
   top: 560px;
   left: 60px;
 }
@@ -29,64 +30,79 @@ div img{
   left: 400px;
 }
 
+div img:hover{
+  margin: none;
+  padding: none;
+  border: dotted;
+}
+
 #dealer .card-one{
   background-color: grey;
   position: absolute;
-  width: 180px;
+  width: 20%;
   height: 250px;
   left: 814px;
-  border: dotted;
+  background-position: 0px 0px;
+  transition: all 5s ease;
+  /*border: dotted;
   background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
   border-color: #808080 #000000 #000000 #808080;
   border-width: 1px;
   border-style: solid;
   color: #000000;
-  font-size: 20pt;
+  font-size: 20pt;*/
 }
 
 #dealer .card-two{
   background-color: grey;
+  /*background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");*/
   position: absolute;
-  width: 180px;
+  width: 20%;
   height: 250px;
   left: 631px;
-  border: dotted;
+  transition: all 5s ease;
+  /*background-position: -190px 0px;*/
+  /*border: dotted;
   background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
   border-color: #808080 #000000 #000000 #808080;
   border-width: 1px;
   border-style: solid;
   color: #000000;
-  font-size: 20pt;
+  font-size: 20pt;*/
 }
 
 #player .card-one{
   background-color: grey;
   position: absolute;
-  width: 180px;
+  width: 20%;
   height: 250px;
-  left: 0px;
+  background-position: -1875px -1060px;
+  transition: all 5s ease;
+  /*left: 0px;
   border: dotted;
   background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
   border-color: #808080 #000000 #000000 #808080;
   border-width: 1px;
   border-style: solid;
   color: #000000;
-  font-size: 20pt;
+  font-size: 20pt;*/
 }
 
 #player .card-two{
   background-color: grey;
   position: absolute;
-  width: 180px;
-  height: 250px;
+  width: 20%;
+  height: 263px;
   left: 181px;
-  border: dotted;
+  background-position: -380px 0px;
+  transition: all 5s ease;
+  /*border: dotted;
   background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
   border-color: #808080 #000000 #000000 #808080;
   border-width: 1px;
   border-style: solid;
   color: #000000;
-  font-size: 20pt;
+  font-size: 20pt;*/
 }
 
 .cash{
@@ -103,21 +119,9 @@ div img{
   background: green;
 }
 
-.card {
-  background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/CardBack.png");
-  border-color: #808080 #000000 #000000 #808080;
-  border-width: 1px;
-  border-style: solid;
-  color: #000000;
-  font-size: 20pt;
-  position: absolute;
-  width:  3.75em;
-  height: 5.00em;
-}
-.front {
-  background-color: #ffffff;
-  color: #000000;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.active{
+  background-image: url("/Users/JPallath/src/Project1/BlackJack/Images/OldTimeyDeck.png");
+  background-repeat: no-repeat;
+  background-size : 1150%;
+  transform: rotate(360deg);
 }

@@ -14,28 +14,53 @@ var Dealer = {
   dealt : function(){
     deck.deal()
     this.hand.push(x[0]);
-    this.keepPlaying()
+    $dealersCard.addClass("active")
+    convertCodeToCards(x[0]);
+    $dealersCard.css("background-position", positionsOfFirstCards);
+    setTimeout(function(){Dealer.keepPlaying()},1000)
   },
   play : function (){
     // this line will reveal the dealer's hidden card which is actually just
     // dealt by the computer now.  I will be updating values eventually in the
     // code as of now the computer just keeps playing until he has four cards
     deck.deal()
+    // console.log(Dealer.hand)
     this.hand.push(x[0])
+    $dealerSecondCard=$("#dealer .card-two")
+    $dealerSecondCard.addClass("active")
+    convertCodeToCards(x[0]);
+    $dealerSecondCard.css("background-position", positionsOfFirstCards);
     that = Dealer.hand
-    console.log("This is the dealer's hand", that)
-    deck.accessValue(that)
-    console.log("This is that when we go back into dealer.play", thatTotal)
-    if (thatTotal < 17){
-      while (thatTotal<17){
-        deck.deal()
-        this.hand.push(x[0])
-        that = this.hand
-        deck.accessValue(that)
-      }
-      console.log(Player.hand, Dealer.hand)
-      deck.findWinner();
-
+    console.log(that)
+    Dealer.handTotal=deck.accessValue(that)
+    check=deck.checkWin(Dealer.handTotal)
+    if (check==false){
+      Dealer.bust()
     }
-  }
+    while (Dealer.handTotal<17){
+      console.log(Dealer.handTotal)
+      deck.deal()
+      this.hand.push(x[0])
+      convertCodeToCards(x[0])
+      $newDCard=$("<div>")
+      $DealerLocation.append($newDCard)
+      Dealer.handTotal=deck.accessValue(that)
+      $newDCard.css("background-position", positionsOfFirstCards)
+               .css("width","180px")
+               .css("height","250px")
+               .addClass("active")
+               .css("position","absolute")
+               .css("right",righty)
+     righty=righty+183;
+     check = deck.checkWin(Dealer.handTotal)
+     if (check==false){
+       Dealer.bust()
+       return Dealer.handTotal
+     }
+   } deck.countUpToWinner();
+ },
+ bust : function(){
+   console.log("House BUSTED!")
+   return
+ }
 }

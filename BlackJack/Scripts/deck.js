@@ -16,48 +16,79 @@ var deck = {
     return x;
     },
   accessValue : function(that){
-    // This function should be able to tell the user what the total of his cards are and if the computer/user should keep going
+    console.log(that)
     var total = 0;
     var logged = 0;
-    console.log("this is that:", that)
-    console.log(total)
+    var value = 0;
+
     for (var i = 0; i<that.length; i++){
-
-      console.log("this is running")
-
-      var accessor = that[i]
-      var RANKS = ["2","3","4","5",'6','7','8','9']
+      var accessor=that[i];
+      console.log(i)
+      var RANKS = ["2","3","4","5","6","7","8","9"];
       var rank = accessor.split(" ")[0];
 
       if (rank == "A"){
-        total = total + 11
-        logged = 1;
+        logged=logged + 1;
+        total=total+11;
+        // console.log("ace was played")
+      } else {
+        var ranked = RANKS.indexOf(rank)+2;
+        if (ranked===1){
+          // console.log("greater than 9")
+          value = ranked + 10;
+          total=total+10
+        } else {
+          // console.log("ranked")
+          total=total+ranked
+          // console.log(total)
+        }
       }
-
-      var value = RANKS.indexOf(rank)+2;
-      if (value===1){
-         value = 10
-         }
-      total = total + value;
-      console.log(total)
     }
-    //Currently this is a player focused victory
-    thatTotal=total;
-    console.log(thatTotal)
-    if (total===21){
-    } else if (total > 21) {
-        if(logged = 1){
-          total -= 10;
-          console.log(this.total)
-        }
-        else if(logged > 1){
-          total -= logged * 10
-          console.log(total)
-        }
-    }
+  // console.log ("returned total",total)
+  if (total>21){
+    total=total-(logged*10)
     return total
+  }
+  return total
   },
-  cardMatch : function(x){
-
-  },
+    //Currently this is a player focused victory
+    // thatTotal=total;
+    // if (total==21){
+    // } else if (total > 21) {
+    //     if(logged = 1){
+    //       console.log("There was an ace")
+    //       total -= 10;
+    //     }
+    //     else if(logged > 1){
+    //       total -= logged * 10
+    //     }
+    // }
+checkWin : function(x){
+  // console.log("The value of x when the checkWin function ran",x)
+  if (x>21){
+    return false
+    // console.log("This happens when we have a value of greater than 21")
+  } else if (x==21) {
+    return true
+    // (console.log("This happens when 21 is hit"))
+  } else if (x<21) {
+    return true
+    // console.log("Every other situation")
+  } else {
+    // console.log("nothing was registered")
+  }
+},
+countUpToWinner : function(){
+  if (Player.handTotal>Dealer.handTotal){
+    $image.attr("src","/Users/JPallath/src/Project1/BlackJack/Images/Custom-Balloon-design-tool.jpg")
+    Player.money=Player.money+(2*putIn)
+    $cash.text(Player.money)
+  } else if (Player.handTotal<Dealer.handTotal){
+    $image.attr("src","/Users/JPallath/src/Project1/BlackJack/Images/sad-kid.jpg")
+  } else if (Player.handTotal==Dealer.handTotal){
+    $image.attr("src","/Users/JPallath/src/Project1/BlackJack/Images/dog.jpg")
+    $body=$("body");
+    $body.css("background-image","/Users/JPallath/src/Project1/BlackJack/Images/dog.jpg")
+  }
+}
     }
